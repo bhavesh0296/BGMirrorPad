@@ -11,22 +11,24 @@ import UIKit
 class ViewController: UIViewController {
 
     // MARK: - Outlets
-     @IBOutlet public var drawViewContainer: UIView!
-     @IBOutlet public var inputDrawView: DrawView!
-     @IBOutlet public var mirrorDrawViews: [DrawView]!
+    @IBOutlet public var drawViewContainer: UIView!
+    @IBOutlet public var inputDrawView: DrawView!
+    @IBOutlet public var mirrorDrawViews: [DrawView]!
 
-     // MARK: - Actions
-     @IBAction public func animatePressed(_ sender: Any) {
-       inputDrawView.animate()
-     }
+    // MARK: - Actions
+    @IBAction public func animatePressed(_ sender: Any) {
+        inputDrawView.animate()
+        mirrorDrawViews.forEach { $0.copyLines(from: inputDrawView)}
+        mirrorDrawViews.forEach { $0.animate() }
+    }
 
-     @IBAction public func clearPressed(_ sender: Any) {
-       inputDrawView.clear()
-       mirrorDrawViews.forEach { $0.clear() }
-     }
+    @IBAction public func clearPressed(_ sender: Any) {
+        inputDrawView.clear()
+        mirrorDrawViews.forEach { $0.clear() }
+    }
 
-     @IBAction public func sharePressed(_ sender: Any) {
+    @IBAction public func sharePressed(_ sender: Any) {
 
-     }
+    }
 }
 

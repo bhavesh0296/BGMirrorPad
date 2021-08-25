@@ -15,6 +15,7 @@
 		406B40B126D6B1B70061843B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406B40B026D6B1B70061843B /* Main.storyboard */; };
 		406B40B326D6B1CF0061843B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406B40B226D6B1CF0061843B /* LaunchScreen.storyboard */; };
 		406B40B526D6B1E70061843B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406B40B426D6B1E70061843B /* Assets.xcassets */; };
+		406B40B826D6C0140061843B /* Copying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B40B726D6C0140061843B /* Copying.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		406B40B026D6B1B70061843B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		406B40B226D6B1CF0061843B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		406B40B426D6B1E70061843B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		406B40B726D6C0140061843B /* Copying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copying.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		406B409326D6B14A0061843B /* BG_MirroPad */ = {
 			isa = PBXGroup;
 			children = (
+				406B40B626D6BFFF0061843B /* Protocol */,
 				406B40A826D6B1570061843B /* AppDelegate */,
 				406B40A926D6B1600061843B /* Resources */,
 				406B40AB26D6B1770061843B /* View */,
@@ -103,6 +106,14 @@
 				406B40B226D6B1CF0061843B /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		406B40B626D6BFFF0061843B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				406B40B726D6C0140061843B /* Copying.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				406B409926D6B14A0061843B /* ViewController.swift in Sources */,
+				406B40B826D6C0140061843B /* Copying.swift in Sources */,
 				406B40AF26D6B1A60061843B /* LineShape.swift in Sources */,
 				406B409526D6B14A0061843B /* AppDelegate.swift in Sources */,
 				406B40AD26D6B19E0061843B /* DrawView.swift in Sources */,
