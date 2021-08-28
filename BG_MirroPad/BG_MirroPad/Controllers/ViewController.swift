@@ -15,6 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet public var inputDrawView: DrawView!
     @IBOutlet public var mirrorDrawViews: [DrawView]!
 
+
+    // MARK: - View Lifecyle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        mirrorDrawViews.forEach { inputDrawView.addDelegate($0) }
+    }
+
     // MARK: - Actions
     @IBAction public func animatePressed(_ sender: Any) {
         inputDrawView.animate()

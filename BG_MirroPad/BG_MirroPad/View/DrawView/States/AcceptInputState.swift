@@ -32,8 +32,14 @@ public class AcceptInputState: DrawViewState {
         let line = LineShape(color: drawView.lineColor,
                              width: drawView.lineWidth,
                              startPoint: point)
-        drawView.lines.append(line)
-        drawView.layer.addSublayer(line)
+
+        addLine(line)
+//        drawView.lines.append(line)
+//        drawView.layer.addSublayer(line)
+
+        drawView.multicastDelegate.invokeDelegates { delegate in
+            delegate.drawView(drawView, didAddLine: line)
+        }
     }
 
     public override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -43,8 +49,32 @@ public class AcceptInputState: DrawViewState {
                 return
         }
 
-        currentLine.addPoint(point)
+        addPoint(point)
+//        currentLine.addPoint(point)
+
+        drawView.multicastDelegate.invokeDelegates { delegate in
+            delegate.drawView(drawView, didAddPoint: point)
+        }
     }
 
-    
+    private func addLine(_ line: LineShape){
+        drawView.lines.append(line)
+        drawView.layer.addSublayer(line)
+    }
+
+    private func addPoint(_ point: CGPoint){
+        drawView.lines.last?.addPoint(point)
+    }
+}
+
+extension AcceptInputState {
+
+    public override func drawView(_ source: DrawView, didAddLine line: LineShape) {
+        let newLine = line.copy() as LineShape
+        addLine(newLine)
+    }
+
+    public override func drawView(_ source: DrawView, didAddPoint point: CGPoint) {
+        addPoint(point)
+    }
 }
