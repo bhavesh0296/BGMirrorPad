@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet public var inputDrawView: DrawView!
     @IBOutlet public var mirrorDrawViews: [DrawView]!
 
+    public lazy var shareFacade = ShareFacade(entireDrawing: drawViewContainer,
+                                  inputDrawing: inputDrawView,
+                                  parentViewController: self)
+
 
     // MARK: - View Lifecyle
     override func viewDidLoad() {
@@ -35,7 +39,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction public func sharePressed(_ sender: Any) {
-
+        shareFacade.presentShareController()
     }
 }
 
