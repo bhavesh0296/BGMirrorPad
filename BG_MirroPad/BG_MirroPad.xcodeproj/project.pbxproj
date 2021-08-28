@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4046438C26DA203500ED7EC4 /* AcceptInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046438B26DA203500ED7EC4 /* AcceptInputState.swift */; };
+		4046438E26DA205000ED7EC4 /* AnimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046438D26DA205000ED7EC4 /* AnimateState.swift */; };
+		4046439026DA205E00ED7EC4 /* ClearState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046438F26DA205E00ED7EC4 /* ClearState.swift */; };
+		4046439226DA206D00ED7EC4 /* CopyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046439126DA206D00ED7EC4 /* CopyState.swift */; };
+		4046439426DA207B00ED7EC4 /* DrawViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046439326DA207B00ED7EC4 /* DrawViewState.swift */; };
 		406B409526D6B14A0061843B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B409426D6B14A0061843B /* AppDelegate.swift */; };
 		406B409726D6B14A0061843B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B409626D6B14A0061843B /* SceneDelegate.swift */; };
 		406B409926D6B14A0061843B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B409826D6B14A0061843B /* ViewController.swift */; };
@@ -19,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4046438B26DA203500ED7EC4 /* AcceptInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptInputState.swift; sourceTree = "<group>"; };
+		4046438D26DA205000ED7EC4 /* AnimateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateState.swift; sourceTree = "<group>"; };
+		4046438F26DA205E00ED7EC4 /* ClearState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearState.swift; sourceTree = "<group>"; };
+		4046439126DA206D00ED7EC4 /* CopyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyState.swift; sourceTree = "<group>"; };
+		4046439326DA207B00ED7EC4 /* DrawViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewState.swift; sourceTree = "<group>"; };
 		406B409126D6B14A0061843B /* BG_MirroPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BG_MirroPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		406B409426D6B14A0061843B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		406B409626D6B14A0061843B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +53,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4046438926DA1FE100ED7EC4 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				4046438B26DA203500ED7EC4 /* AcceptInputState.swift */,
+				4046438D26DA205000ED7EC4 /* AnimateState.swift */,
+				4046438F26DA205E00ED7EC4 /* ClearState.swift */,
+				4046439126DA206D00ED7EC4 /* CopyState.swift */,
+				4046439326DA207B00ED7EC4 /* DrawViewState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		4046438A26DA1FFB00ED7EC4 /* DrawView */ = {
+			isa = PBXGroup;
+			children = (
+				406B40AC26D6B19E0061843B /* DrawView.swift */,
+				406B40AE26D6B1A60061843B /* LineShape.swift */,
+				4046438926DA1FE100ED7EC4 /* States */,
+			);
+			path = DrawView;
+			sourceTree = "<group>";
+		};
 		406B408826D6B14A0061843B = {
 			isa = PBXGroup;
 			children = (
@@ -62,11 +94,11 @@
 		406B409326D6B14A0061843B /* BG_MirroPad */ = {
 			isa = PBXGroup;
 			children = (
-				406B40B626D6BFFF0061843B /* Protocol */,
 				406B40A826D6B1570061843B /* AppDelegate */,
+				406B40AA26D6B16B0061843B /* Controllers */,
+				406B40B626D6BFFF0061843B /* Protocol */,
 				406B40A926D6B1600061843B /* Resources */,
 				406B40AB26D6B1770061843B /* View */,
-				406B40AA26D6B16B0061843B /* Controllers */,
 			);
 			path = BG_MirroPad;
 			sourceTree = "<group>";
@@ -100,8 +132,7 @@
 		406B40AB26D6B1770061843B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				406B40AC26D6B19E0061843B /* DrawView.swift */,
-				406B40AE26D6B1A60061843B /* LineShape.swift */,
+				4046438A26DA1FFB00ED7EC4 /* DrawView */,
 				406B40B026D6B1B70061843B /* Main.storyboard */,
 				406B40B226D6B1CF0061843B /* LaunchScreen.storyboard */,
 			);
@@ -187,12 +218,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4046439226DA206D00ED7EC4 /* CopyState.swift in Sources */,
 				406B409926D6B14A0061843B /* ViewController.swift in Sources */,
 				406B40B826D6C0140061843B /* Copying.swift in Sources */,
+				4046438C26DA203500ED7EC4 /* AcceptInputState.swift in Sources */,
 				406B40AF26D6B1A60061843B /* LineShape.swift in Sources */,
 				406B409526D6B14A0061843B /* AppDelegate.swift in Sources */,
+				4046439026DA205E00ED7EC4 /* ClearState.swift in Sources */,
+				4046438E26DA205000ED7EC4 /* AnimateState.swift in Sources */,
 				406B40AD26D6B19E0061843B /* DrawView.swift in Sources */,
 				406B409726D6B14A0061843B /* SceneDelegate.swift in Sources */,
+				4046439426DA207B00ED7EC4 /* DrawViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
